@@ -12,8 +12,8 @@
 function random_gen {
   # Генерируем случайное число от 0 до 1
   random_num=$(echo "scale=2; $RANDOM/32767" | bc -l)
-  # Умножьте на 100, чтобы получить число от 0 до 100
-  result=$(echo "scale=2; $random_num*100" | bc -l)
+  # Умножим на 200, чтобы получить число от 0 до 200, чтобы цикл иногда срабатывал
+  result=$(echo "scale=2; $random_num*200" | bc -l)
   # Выведите результат
   echo "$result"
 }
